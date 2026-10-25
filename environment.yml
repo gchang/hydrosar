@@ -1,0 +1,30 @@
+name: hydrosar
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python>=3.8
+  - pip
+  # For packaging and testing
+  - setuptools_scm>=6.2
+  - pytest
+  - pytest-console-scripts
+  - pytest-cov
+  # For running
+  - asf_tools>=0.6
+  - astropy
+  - boto3
+  - fiona
+  - gdal>=3.7
+  - numpy<2
+  - pysheds>=0.3
+  - rasterio
+  - scikit-fuzzy
+  - scikit-image
+  - scipy
+  - shapely
+  - tqdm
+  - pip:
+    # for testing
+    - -r requirements-static.txt
+    - gdal-utils
