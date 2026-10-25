@@ -27,6 +27,10 @@ or into a virtual environment with:
 python -m pip install hydrosar
 ```
 
+The released packages do not yet include the fixes in this source tree. To install from a clone of this
+repository (as the `Dockerfile` does), run `conda env create -f environment.yml`, `conda activate hydrosar`,
+then `python -m pip install .` from the repository root.
+
 ### Running as a Docker container
 
 We also publish a [Docker](https://docs.docker.com/get-started/) image for `hydrosar`, with all the dependencies
