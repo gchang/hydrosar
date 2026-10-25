@@ -261,7 +261,7 @@ def make_flood_map(
 
     flood_depth = np.zeros(flood_mask.shape)
 
-    for ll in tqdm(range(1, num_labels)):  # Skip first, largest label.
+    for ll in tqdm(range(1, num_labels + 1)):  # Labels run from 1 to num_labels; 0 is the background.
         slices = object_slices[ll - 1]
         min0, max0 = slices[0].start, slices[0].stop
         min1, max1 = slices[1].start, slices[1].stop
