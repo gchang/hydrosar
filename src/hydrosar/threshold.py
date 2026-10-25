@@ -109,7 +109,7 @@ def expectation_maximization_threshold(tile: np.ndarray, number_of_classes: int 
                 posterior_lookup.update({pixel_val: [0] * number_of_classes})
                 for n in range(0, number_of_classes):
                     x = _make_distribution(class_means[n], class_variances[n], class_proportions[n], image_copy[i, j])
-                    posterior[i, j, n] = x * class_proportions[n]
+                    posterior[i, j, n] = x.item() * class_proportions[n]
                     posterior_lookup[pixel_val][n] = posterior[i, j, n]
 
     sorti = np.argsort(class_means)
